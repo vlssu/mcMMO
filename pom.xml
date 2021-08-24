@@ -153,9 +153,15 @@
                             <include>net.kyori:adventure-text-serializer-craftbukkit</include>
                             <include>net.kyori:adventure-text-serializer-gson-legacy-impl</include>
                             <include>co.aikar:acf-bukkit</include>
+                            <include>org.spongepowered:configurate-core</include>
+                            <include>org.spongepowered:configurate-hocon</include>
                         </includes>
                     </artifactSet>
                     <relocations>
+                        <relocation>
+                            <pattern>org.spongepowered.configurate</pattern>
+                            <shadedPattern>com.gmail.nossr50.mcmmo.configurate</shadedPattern>
+                        </relocation>
                         <relocation>
                             <pattern>net.kyori.examination</pattern>
                             <shadedPattern>com.gmail.nossr50.mcmmo.kyori.examination</shadedPattern>
@@ -264,6 +270,12 @@
             <groupId>net.kyori</groupId>
             <artifactId>adventure-key</artifactId>
             <version>4.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.spongepowered</groupId>
+            <!-- Modify this line to target the loader you wish to use. -->
+            <artifactId>configurate-hocon</artifactId>
+            <version>4.0.0</version>
         </dependency>
         <dependency>
             <groupId>net.kyori</groupId>
